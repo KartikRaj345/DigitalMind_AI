@@ -1,0 +1,716 @@
+{
+  "split": "test",
+  "n_records": 48,
+  "gold_span_labels": [
+    "MONEY",
+    "ORG",
+    "PERSON"
+  ],
+  "configurations": {
+    "rules": {
+      "strict_f1": 0.878,
+      "strict_precision": 0.8372,
+      "strict_recall": 0.9231,
+      "boundary_f1": 0.9512,
+      "per_label": {
+        "MONEY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 24,
+          "tp": 24,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "ORG": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571,
+          "support": 36,
+          "tp": 27,
+          "fp": 0,
+          "fn": 9,
+          "tn": 0
+        },
+        "PERSON": {
+          "precision": 0.7308,
+          "recall": 1.0,
+          "f1": 0.8444,
+          "support": 57,
+          "tp": 57,
+          "fp": 21,
+          "fn": 0,
+          "tn": 0
+        }
+      },
+      "errors": [
+        {
+          "type": "false_positive",
+          "record_id": "plain-0109",
+          "text": "Project Atlas",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "plain-0099",
+          "text": "Project Meridian",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0016",
+          "text": "Project Meridian",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0016",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0016",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0006",
+          "text": "Project Beacon",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0006",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0006",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0050",
+          "text": "Project Beacon",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0050",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0050",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0049",
+          "text": "Project Cedar",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0049",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0049",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0031",
+          "text": "Project Lantern",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0031",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0031",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0013",
+          "text": "Project Cedar",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0013",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0013",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0048",
+          "text": "Project Lantern",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0048",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0048",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0020",
+          "text": "Project Meridian",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0020",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0020",
+          "text": "Account Services",
+          "label": "ORG"
+        }
+      ]
+    },
+    "spacy": {
+      "strict_f1": 0.5919,
+      "strict_precision": 0.6226,
+      "strict_recall": 0.5641,
+      "boundary_f1": 0.7713,
+      "per_label": {
+        "MONEY": {
+          "precision": 0.2,
+          "recall": 0.1667,
+          "f1": 0.1818,
+          "support": 24,
+          "tp": 4,
+          "fp": 16,
+          "fn": 20,
+          "tn": 0
+        },
+        "ORG": {
+          "precision": 0.5897,
+          "recall": 0.6389,
+          "f1": 0.6133,
+          "support": 36,
+          "tp": 23,
+          "fp": 16,
+          "fn": 13,
+          "tn": 0
+        },
+        "PERSON": {
+          "precision": 0.8298,
+          "recall": 0.6842,
+          "f1": 0.75,
+          "support": 57,
+          "tp": 39,
+          "fp": 8,
+          "fn": 18,
+          "tn": 0
+        }
+      },
+      "errors": [
+        {
+          "type": "false_negative",
+          "record_id": "backref-0005",
+          "text": "Anders Abadi",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "plain-0109",
+          "text": "Marcus Okafor",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "plain-0109",
+          "text": "Cedar Peak Savings",
+          "label": "ORG"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "plain-0052",
+          "text": "Clara Okafor",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "plain-0099",
+          "text": "Rafael Fontaine",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "plain-0099",
+          "text": "Harbourline Credit Union",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0016",
+          "text": "980.75",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0016",
+          "text": "Project Meridian",
+          "label": "ORG"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0016",
+          "text": "Sofia Ferreira",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0016",
+          "text": "$980.75",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0006",
+          "text": "Project Beacon",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0006",
+          "text": "1,200 euros",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "backref-0009",
+          "text": "Anders Villanueva",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0050",
+          "text": "4,250.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0050",
+          "text": "Project Beacon",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0050",
+          "text": "Beatrice Bergstrom",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0050",
+          "text": "$4,250.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0060",
+          "text": "75.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0060",
+          "text": "$75.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0092",
+          "text": "75.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0092",
+          "text": "$75.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0092",
+          "text": "Bright Anchor Lending",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0036",
+          "text": "240.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0036",
+          "text": "Ingrid Abadi",
+          "label": "ORG"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0036",
+          "text": "$240.00",
+          "label": "MONEY"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0036",
+          "text": "Ingrid Abadi",
+          "label": "PERSON"
+        }
+      ]
+    },
+    "hybrid": {
+      "strict_f1": 0.8638,
+      "strict_precision": 0.7929,
+      "strict_recall": 0.9487,
+      "boundary_f1": 0.9105,
+      "per_label": {
+        "MONEY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 24,
+          "tp": 24,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "ORG": {
+          "precision": 0.6735,
+          "recall": 0.9167,
+          "f1": 0.7765,
+          "support": 36,
+          "tp": 33,
+          "fp": 16,
+          "fn": 3,
+          "tn": 0
+        },
+        "PERSON": {
+          "precision": 0.806,
+          "recall": 0.9474,
+          "f1": 0.871,
+          "support": 57,
+          "tp": 54,
+          "fp": 13,
+          "fn": 3,
+          "tn": 0
+        }
+      },
+      "errors": [
+        {
+          "type": "false_positive",
+          "record_id": "plain-0109",
+          "text": "Project Atlas",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "plain-0099",
+          "text": "Project Meridian",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0016",
+          "text": "Project Meridian",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0006",
+          "text": "Project Beacon",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0050",
+          "text": "Project Beacon",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0036",
+          "text": "Ingrid Abadi",
+          "label": "ORG"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0036",
+          "text": "Ingrid Abadi",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0049",
+          "text": "Project Cedar",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0049",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0049",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0027",
+          "text": "SLA",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0031",
+          "text": "Harbourline",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0031",
+          "text": "Project Lantern",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0013",
+          "text": "Project Cedar",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "plain-0030",
+          "text": "Harbourline",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0048",
+          "text": "Project Lantern",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0048",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0048",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0072",
+          "text": "SLA",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0072",
+          "text": "Leila Abadi",
+          "label": "ORG"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "lookalike-0072",
+          "text": "Leila Abadi",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0020",
+          "text": "Project Meridian",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "risk-0020",
+          "text": "Account Services",
+          "label": "PERSON"
+        },
+        {
+          "type": "false_negative",
+          "record_id": "risk-0020",
+          "text": "Account Services",
+          "label": "ORG"
+        },
+        {
+          "type": "false_positive",
+          "record_id": "lookalike-0014",
+          "text": "SLA",
+          "label": "ORG"
+        }
+      ]
+    }
+  },
+  "dates": {
+    "absolute_precision": 0.875,
+    "relative_resolved_before_record": 0.2778,
+    "relative_given_a_range": 1.0,
+    "records_with_backreference_found": 0.1875,
+    "counts": {
+      "absolute": 16,
+      "relative": 18,
+      "records": 48
+    },
+    "precision_mismatches": [
+      {
+        "record_id": "plain-0038",
+        "raw": "12/03/2026",
+        "resolved": "2026-03-12T00:00:00",
+        "expected": "2026-12-03T00:00:00"
+      },
+      {
+        "record_id": "risk-0013",
+        "raw": "March 2026",
+        "resolved": "2026-03-01T00:00:00",
+        "expected": "2026-03-16T00:00:00"
+      }
+    ],
+    "examples": [
+      {
+        "raw": "last week",
+        "kind": "relative",
+        "precision": "week",
+        "start": "2026-02-23T00:00:00+00:00",
+        "end": "2026-03-02T00:00:00+00:00",
+        "anchor": "2026-03-02T10:32:00+00:00"
+      },
+      {
+        "raw": "last week",
+        "kind": "relative",
+        "precision": "week",
+        "start": "2026-02-23T00:00:00+00:00",
+        "end": "2026-03-02T00:00:00+00:00",
+        "anchor": "2026-03-07T01:25:00+00:00"
+      },
+      {
+        "raw": "today",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-03-23T00:00:00+00:00",
+        "end": "2026-03-24T00:00:00+00:00",
+        "anchor": "2026-03-23T03:14:00+00:00"
+      },
+      {
+        "raw": "last week",
+        "kind": "relative",
+        "precision": "week",
+        "start": "2026-03-16T00:00:00+00:00",
+        "end": "2026-03-23T00:00:00+00:00",
+        "anchor": "2026-03-28T22:41:00+00:00"
+      },
+      {
+        "raw": "last week",
+        "kind": "relative",
+        "precision": "week",
+        "start": "2026-03-23T00:00:00+00:00",
+        "end": "2026-03-30T00:00:00+00:00",
+        "anchor": "2026-03-31T16:04:00+00:00"
+      },
+      {
+        "raw": "today",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-04-04T00:00:00+00:00",
+        "end": "2026-04-05T00:00:00+00:00",
+        "anchor": "2026-04-04T21:26:00+00:00"
+      },
+      {
+        "raw": "today",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-04-19T00:00:00+00:00",
+        "end": "2026-04-20T00:00:00+00:00",
+        "anchor": "2026-04-19T11:38:00+00:00"
+      },
+      {
+        "raw": "tomorrow",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-05-03T00:00:00+00:00",
+        "end": "2026-05-04T00:00:00+00:00",
+        "anchor": "2026-05-02T04:46:00+00:00"
+      },
+      {
+        "raw": "tomorrow",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-05-14T00:00:00+00:00",
+        "end": "2026-05-15T00:00:00+00:00",
+        "anchor": "2026-05-13T07:01:00+00:00"
+      },
+      {
+        "raw": "tomorrow",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-05-18T00:00:00+00:00",
+        "end": "2026-05-19T00:00:00+00:00",
+        "anchor": "2026-05-17T10:18:00+00:00"
+      },
+      {
+        "raw": "today",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-05-24T00:00:00+00:00",
+        "end": "2026-05-25T00:00:00+00:00",
+        "anchor": "2026-05-24T20:45:00+00:00"
+      },
+      {
+        "raw": "today",
+        "kind": "relative",
+        "precision": "day",
+        "start": "2026-06-01T00:00:00+00:00",
+        "end": "2026-06-02T00:00:00+00:00",
+        "anchor": "2026-06-01T09:02:00+00:00"
+      }
+    ]
+  }
+}

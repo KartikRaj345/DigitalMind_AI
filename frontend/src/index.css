@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-900 antialiased;
+  }
+
+  /* Visible focus on every interactive element, including keyboard-only paths. */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    @apply outline-none ring-2 ring-teal-700 ring-offset-2 ring-offset-white;
+    border-radius: 0.25rem;
+  }
+
+  ::selection {
+    @apply bg-teal-200 text-ink-950;
+  }
+}
+
+@layer components {
+  .dm-card {
+    @apply rounded-lg border border-ink-200 bg-white shadow-sm;
+  }
+
+  .dm-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-ink-300 bg-white
+      px-3 py-2 text-sm font-medium text-ink-800 transition-colors
+      hover:border-ink-400 hover:bg-ink-50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .dm-btn-primary {
+    @apply border-teal-700 bg-teal-700 text-white hover:border-teal-800 hover:bg-teal-800;
+  }
+
+  .dm-btn-risk {
+    @apply border-risk-700 bg-risk-700 text-white hover:border-risk-800 hover:bg-risk-800;
+  }
+
+  .dm-btn-ghost {
+    @apply border-transparent bg-transparent text-ink-700 hover:bg-ink-100;
+  }
+
+  .dm-input {
+    @apply w-full rounded-md border border-ink-300 bg-white px-3 py-2 text-sm text-ink-900
+      placeholder:text-ink-400 disabled:bg-ink-50;
+  }
+
+  .dm-chip {
+    @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium;
+  }
+
+  .dm-section-title {
+    @apply text-xs font-semibold uppercase tracking-wide text-ink-500;
+  }
+}
+
+/* Record body highlighting: the highlight overlay boxes are absolutely positioned
+   over the raw text, so the marks can never shift a character offset. */
+.dm-body-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  tab-size: 4;
+}
+
+.dm-body-layer {
+  position: relative;
+}
+
+.dm-body-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dm-mark-box {
+  position: absolute;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.dm-scroll-x {
+  scrollbar-width: thin;
+}
+
+@keyframes dm-pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.dm-loading-dot {
+  animation: dm-pulse-soft 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dm-loading-dot {
+    animation: none;
+  }
+}

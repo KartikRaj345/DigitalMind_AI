@@ -1,0 +1,26 @@
+# DigitalMind
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# local data + model artifacts (never commit user records)
+data/*.db
+data/*.sqlite3
+data/uploads/
+artifacts/
+reports/figures/*.png
+
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example

@@ -1,0 +1,123 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "A. payment message is flagged for all four indicators",
+      "passed": true,
+      "detail": "flagged=['emotional_pressure', 'payment_request', 'threat_language', 'urgency']",
+      "evidence": null
+    },
+    {
+      "check": "A. every cited span points at the words it quotes",
+      "passed": true,
+      "detail": "19 spans cited, 0 mismatched",
+      "evidence": []
+    },
+    {
+      "check": "A. benign look-alike reminder is NOT flagged",
+      "passed": true,
+      "detail": "flagged=[]",
+      "evidence": null
+    },
+    {
+      "check": "A. the earlier account records are connected to the payment message",
+      "passed": true,
+      "detail": "2 insight(s) cite the payment message together with earlier records",
+      "evidence": null
+    },
+    {
+      "check": "A. timeline places the earlier records before the payment request",
+      "passed": true,
+      "detail": "found 3/3 expected prior items",
+      "evidence": []
+    },
+    {
+      "check": "A. recorded and inferred items are in separate lanes",
+      "passed": true,
+      "detail": "lanes present in the prior window: ['explicit', 'recorded']",
+      "evidence": null
+    },
+    {
+      "check": "B. an unresolved-discussion insight is produced",
+      "passed": true,
+      "detail": "1 insight(s)",
+      "evidence": null
+    },
+    {
+      "check": "B. the required cautious wording appears verbatim",
+      "passed": true,
+      "detail": "expected substring: 'No matching discussion was found in the records analyzed.'",
+      "evidence": null
+    },
+    {
+      "check": "B. the wording does not claim the discussion did not happen",
+      "passed": true,
+      "detail": "This record refers back to an earlier discussion (\u201cAs we discussed\u201d), but No matching discussion was found in the records analyzed. I searched 4 earlier record(",
+      "evidence": null
+    },
+    {
+      "check": "B. the insight cites the exact phrase in the source record",
+      "passed": true,
+      "detail": "As we discussed",
+      "evidence": null
+    },
+    {
+      "check": "B. a back-reference WITH a matching record is not reported as unmatched",
+      "passed": true,
+      "detail": "insight kinds present: ['discussion_reference', 'unresolved_discussion_reference']",
+      "evidence": null
+    },
+    {
+      "check": "Ask: 'what happened before' cites the earlier records",
+      "passed": true,
+      "detail": "11 citations",
+      "evidence": null
+    },
+    {
+      "check": "Ask: every citation matches the source span",
+      "passed": true,
+      "detail": "[]",
+      "evidence": null
+    },
+    {
+      "check": "Ask: an unmatched query uses the required wording",
+      "passed": true,
+      "detail": "no_match=True",
+      "evidence": null
+    },
+    {
+      "check": "Ask: 'what records mention' returns cited records with spans",
+      "passed": true,
+      "detail": "6 citations",
+      "evidence": null
+    },
+    {
+      "check": "Ask: a topic absent from the data uses the cautious wording",
+      "passed": true,
+      "detail": "no_match=True",
+      "evidence": null
+    },
+    {
+      "check": "No forbidden claim wording anywhere in the output",
+      "passed": true,
+      "detail": "0 violations",
+      "evidence": null
+    },
+    {
+      "check": "Wording guard passes",
+      "passed": true,
+      "detail": "",
+      "evidence": null
+    },
+    {
+      "check": "Any overall figure is labelled as an estimate and shows its formula",
+      "passed": true,
+      "detail": "weighted mean of the four indicator scores (payment_request 0.35, threat_languag",
+      "evidence": null
+    }
+  ],
+  "counts": {
+    "passed": 19,
+    "failed": 0
+  }
+}

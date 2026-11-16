@@ -1,0 +1,28 @@
+[project]
+name = "digitalmind"
+version = "0.1.0"
+description = "A private, explainable AI workspace that connects your digital records."
+requires-python = ">=3.11,<3.12"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["backend*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["backend/tests"]
+pythonpath = ["."]
+addopts = "-q --strict-markers"
+markers = [
+    "slow: marks tests that train models or run the full evaluation suite",
+    "ml: marks tests that require the optional heavy ML extras",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.run]
+source = ["backend/app"]
+omit = ["*/__main__.py"]

@@ -1,0 +1,2571 @@
+{
+  "seed": 20260310,
+  "splits": {
+    "dev": {
+      "split": "dev",
+      "n": 48,
+      "methods": {
+        "rules": {
+          "threshold": 0.4,
+          "method": "rules",
+          "labels": {
+            "urgency": {
+              "precision": 0.7778,
+              "recall": 0.875,
+              "f1": 0.8235,
+              "support": 8,
+              "tp": 7,
+              "fp": 2,
+              "fn": 1,
+              "tn": 38
+            },
+            "threat_language": {
+              "precision": 1.0,
+              "recall": 0.9,
+              "f1": 0.9474,
+              "support": 10,
+              "tp": 9,
+              "fp": 0,
+              "fn": 1,
+              "tn": 38
+            },
+            "emotional_pressure": {
+              "precision": 0.7,
+              "recall": 1.0,
+              "f1": 0.8235,
+              "support": 7,
+              "tp": 7,
+              "fp": 3,
+              "fn": 0,
+              "tn": 38
+            },
+            "payment_request": {
+              "precision": 0.4706,
+              "recall": 1.0,
+              "f1": 0.64,
+              "support": 8,
+              "tp": 8,
+              "fp": 9,
+              "fn": 0,
+              "tn": 31
+            },
+            "any_indicator": {
+              "precision": 0.5882,
+              "recall": 1.0,
+              "f1": 0.7407,
+              "support": 10,
+              "tp": 10,
+              "fp": 7,
+              "fn": 0,
+              "tn": 31
+            }
+          },
+          "calibration": {
+            "urgency": {
+              "ece": 0.0528,
+              "mce": 0.1565,
+              "brier": 0.0593,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 37,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.027
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 2,
+                  "mean_confidence": 0.2761,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 4,
+                  "mean_confidence": 0.8,
+                  "empirical_rate": 0.75
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 5,
+                  "mean_confidence": 0.9565,
+                  "empirical_rate": 0.8
+                }
+              ]
+            },
+            "threat_language": {
+              "ece": 0.1146,
+              "mce": 0.27,
+              "brier": 0.0451,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 27,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.037
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 12,
+                  "mean_confidence": 0.27,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 2,
+                  "mean_confidence": 0.675,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 2,
+                  "mean_confidence": 0.895,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 5,
+                  "mean_confidence": 0.92,
+                  "empirical_rate": 1.0
+                }
+              ]
+            },
+            "emotional_pressure": {
+              "ece": 0.0542,
+              "mce": 0.2603,
+              "brier": 0.0572,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 38,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 10,
+                  "mean_confidence": 0.9603,
+                  "empirical_rate": 0.7
+                }
+              ]
+            },
+            "payment_request": {
+              "ece": 0.1455,
+              "mce": 0.4295,
+              "brier": 0.0903,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 24,
+                  "mean_confidence": 0.0031,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 4,
+                  "mean_confidence": 0.1091,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 3,
+                  "mean_confidence": 0.3,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 5,
+                  "mean_confidence": 0.4295,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 2,
+                  "mean_confidence": 0.79,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 2,
+                  "mean_confidence": 0.85,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 8,
+                  "mean_confidence": 0.9432,
+                  "empirical_rate": 0.75
+                }
+              ]
+            }
+          },
+          "false_positives": {
+            "benign_records": 38,
+            "benign_flagged": 7,
+            "benign_false_positive_rate": 0.1842,
+            "benign_false_positive_rate_ci95": [
+              0.0922,
+              0.3342
+            ],
+            "benign_lookalikes": 14,
+            "benign_lookalikes_flagged": 5,
+            "benign_lookalike_false_positive_rate": 0.3571
+          }
+        },
+        "tfidf-lr": {
+          "status": "ok",
+          "thresholds": {
+            "urgency": 0.86,
+            "threat_language": 0.86,
+            "emotional_pressure": 0.7,
+            "payment_request": 0.84
+          },
+          "labels": {
+            "urgency": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8889,
+              "support": 8,
+              "tp": 8,
+              "fp": 2,
+              "fn": 0,
+              "tn": 38
+            },
+            "threat_language": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 10,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0,
+              "tn": 38
+            },
+            "emotional_pressure": {
+              "precision": 0.7,
+              "recall": 1.0,
+              "f1": 0.8235,
+              "support": 7,
+              "tp": 7,
+              "fp": 3,
+              "fn": 0,
+              "tn": 38
+            },
+            "payment_request": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8889,
+              "support": 8,
+              "tp": 8,
+              "fp": 2,
+              "fn": 0,
+              "tn": 38
+            },
+            "any_indicator": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 10,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0,
+              "tn": 38
+            }
+          },
+          "calibration": {
+            "urgency": {
+              "ece": 0.0804,
+              "mce": 0.2725,
+              "brier": 0.04,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 38,
+                  "mean_confidence": 0.0454,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 4,
+                  "mean_confidence": 0.8753,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 6,
+                  "mean_confidence": 0.9392,
+                  "empirical_rate": 0.6667
+                }
+              ]
+            },
+            "threat_language": {
+              "ece": 0.0529,
+              "mce": 0.0639,
+              "brier": 0.0035,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 38,
+                  "mean_confidence": 0.0451,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 3,
+                  "mean_confidence": 0.8734,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 7,
+                  "mean_confidence": 0.9361,
+                  "empirical_rate": 1.0
+                }
+              ]
+            },
+            "emotional_pressure": {
+              "ece": 0.065,
+              "mce": 0.0428,
+              "brier": 0.0507,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 37,
+                  "mean_confidence": 0.0428,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 1,
+                  "mean_confidence": 0.114,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 4,
+                  "mean_confidence": 0.7518,
+                  "empirical_rate": 0.75
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 2,
+                  "mean_confidence": 0.8409,
+                  "empirical_rate": 0.5
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 4,
+                  "mean_confidence": 0.9338,
+                  "empirical_rate": 0.75
+                }
+              ]
+            },
+            "payment_request": {
+              "ece": 0.0589,
+              "mce": 0.099,
+              "brier": 0.0374,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 38,
+                  "mean_confidence": 0.0461,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 4,
+                  "mean_confidence": 0.8703,
+                  "empirical_rate": 0.75
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 6,
+                  "mean_confidence": 0.9323,
+                  "empirical_rate": 0.8333
+                }
+              ]
+            }
+          },
+          "false_positives": {
+            "benign_records": 38,
+            "benign_flagged": 0,
+            "benign_false_positive_rate": 0.0,
+            "benign_false_positive_rate_ci95": [
+              0.0,
+              0.0918
+            ],
+            "benign_lookalikes": 14,
+            "benign_lookalikes_flagged": 0,
+            "benign_lookalike_false_positive_rate": 0.0
+          },
+          "scores": null
+        },
+        "distilbert": {
+          "status": "not available",
+          "reason": "install requirements-ml.txt and run backend/scripts/train_risk.py --model distilbert"
+        }
+      }
+    },
+    "test": {
+      "split": "test",
+      "n": 48,
+      "methods": {
+        "rules": {
+          "threshold": 0.4,
+          "method": "rules",
+          "labels": {
+            "urgency": {
+              "precision": 0.625,
+              "recall": 0.7143,
+              "f1": 0.6667,
+              "support": 7,
+              "tp": 5,
+              "fp": 3,
+              "fn": 2,
+              "tn": 38
+            },
+            "threat_language": {
+              "precision": 0.875,
+              "recall": 0.875,
+              "f1": 0.875,
+              "support": 8,
+              "tp": 7,
+              "fp": 1,
+              "fn": 1,
+              "tn": 39
+            },
+            "emotional_pressure": {
+              "precision": 0.8889,
+              "recall": 1.0,
+              "f1": 0.9412,
+              "support": 8,
+              "tp": 8,
+              "fp": 1,
+              "fn": 0,
+              "tn": 39
+            },
+            "payment_request": {
+              "precision": 0.4375,
+              "recall": 1.0,
+              "f1": 0.6087,
+              "support": 7,
+              "tp": 7,
+              "fp": 9,
+              "fn": 0,
+              "tn": 32
+            },
+            "any_indicator": {
+              "precision": 0.5294,
+              "recall": 1.0,
+              "f1": 0.6923,
+              "support": 9,
+              "tp": 9,
+              "fp": 8,
+              "fn": 0,
+              "tn": 31
+            }
+          },
+          "calibration": {
+            "urgency": {
+              "ece": 0.0999,
+              "mce": 0.1445,
+              "brier": 0.0751,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 37,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.0541
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 1,
+                  "mean_confidence": 0.2812,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 2,
+                  "mean_confidence": 0.3468,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 1,
+                  "mean_confidence": 0.425,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 1,
+                  "mean_confidence": 0.5,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 1,
+                  "mean_confidence": 0.825,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 5,
+                  "mean_confidence": 0.9445,
+                  "empirical_rate": 0.8
+                }
+              ]
+            },
+            "threat_language": {
+              "ece": 0.1152,
+              "mce": 0.2427,
+              "brier": 0.0588,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 29,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.0345
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 11,
+                  "mean_confidence": 0.2427,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 3,
+                  "mean_confidence": 0.6833,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 2,
+                  "mean_confidence": 0.895,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 3,
+                  "mean_confidence": 0.9,
+                  "empirical_rate": 0.6667
+                }
+              ]
+            },
+            "emotional_pressure": {
+              "ece": 0.0124,
+              "mce": 0.0661,
+              "brier": 0.0187,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 39,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 9,
+                  "mean_confidence": 0.955,
+                  "empirical_rate": 0.8889
+                }
+              ]
+            },
+            "payment_request": {
+              "ece": 0.1351,
+              "mce": 0.4282,
+              "brier": 0.0713,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 24,
+                  "mean_confidence": 0.0,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 6,
+                  "mean_confidence": 0.1071,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 2,
+                  "mean_confidence": 0.3,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 7,
+                  "mean_confidence": 0.4282,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 4,
+                  "mean_confidence": 0.85,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 5,
+                  "mean_confidence": 0.9291,
+                  "empirical_rate": 0.6
+                }
+              ]
+            }
+          },
+          "false_positives": {
+            "benign_records": 39,
+            "benign_flagged": 8,
+            "benign_false_positive_rate": 0.2051,
+            "benign_false_positive_rate_ci95": [
+              0.1078,
+              0.3553
+            ],
+            "benign_lookalikes": 15,
+            "benign_lookalikes_flagged": 8,
+            "benign_lookalike_false_positive_rate": 0.5333
+          }
+        },
+        "tfidf-lr": {
+          "status": "ok",
+          "thresholds": {
+            "urgency": 0.86,
+            "threat_language": 0.86,
+            "emotional_pressure": 0.7,
+            "payment_request": 0.84
+          },
+          "labels": {
+            "urgency": {
+              "precision": 0.75,
+              "recall": 0.8571,
+              "f1": 0.8,
+              "support": 7,
+              "tp": 6,
+              "fp": 2,
+              "fn": 1,
+              "tn": 39
+            },
+            "threat_language": {
+              "precision": 0.75,
+              "recall": 0.375,
+              "f1": 0.5,
+              "support": 8,
+              "tp": 3,
+              "fp": 1,
+              "fn": 5,
+              "tn": 39
+            },
+            "emotional_pressure": {
+              "precision": 0.875,
+              "recall": 0.875,
+              "f1": 0.875,
+              "support": 8,
+              "tp": 7,
+              "fp": 1,
+              "fn": 1,
+              "tn": 39
+            },
+            "payment_request": {
+              "precision": 0.75,
+              "recall": 0.8571,
+              "f1": 0.8,
+              "support": 7,
+              "tp": 6,
+              "fp": 2,
+              "fn": 1,
+              "tn": 39
+            },
+            "any_indicator": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 9,
+              "tp": 9,
+              "fp": 0,
+              "fn": 0,
+              "tn": 39
+            }
+          },
+          "calibration": {
+            "urgency": {
+              "ece": 0.0728,
+              "mce": 0.1095,
+              "brier": 0.0389,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 39,
+                  "mean_confidence": 0.0469,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 1,
+                  "mean_confidence": 0.7688,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 2,
+                  "mean_confidence": 0.8895,
+                  "empirical_rate": 0.5
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 6,
+                  "mean_confidence": 0.9428,
+                  "empirical_rate": 0.8333
+                }
+              ]
+            },
+            "threat_language": {
+              "ece": 0.0749,
+              "mce": 0.1788,
+              "brier": 0.026,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 38,
+                  "mean_confidence": 0.0424,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 1,
+                  "mean_confidence": 0.1032,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 6,
+                  "mean_confidence": 0.8212,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 3,
+                  "mean_confidence": 0.9354,
+                  "empirical_rate": 0.6667
+                }
+              ]
+            },
+            "emotional_pressure": {
+              "ece": 0.0622,
+              "mce": 0.0931,
+              "brier": 0.0235,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 39,
+                  "mean_confidence": 0.0439,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 1,
+                  "mean_confidence": 0.6862,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 1,
+                  "mean_confidence": 0.7073,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 1,
+                  "mean_confidence": 0.8943,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 6,
+                  "mean_confidence": 0.9264,
+                  "empirical_rate": 0.8333
+                }
+              ]
+            },
+            "payment_request": {
+              "ece": 0.0902,
+              "mce": 0.045,
+              "brier": 0.0425,
+              "reliability": [
+                {
+                  "bin_low": 0.0,
+                  "bin_high": 0.1,
+                  "count": 38,
+                  "mean_confidence": 0.045,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.1,
+                  "bin_high": 0.2,
+                  "count": 1,
+                  "mean_confidence": 0.1188,
+                  "empirical_rate": 0.0
+                },
+                {
+                  "bin_low": 0.2,
+                  "bin_high": 0.3,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.3,
+                  "bin_high": 0.4,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.4,
+                  "bin_high": 0.5,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.5,
+                  "bin_high": 0.6,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.6,
+                  "bin_high": 0.7,
+                  "count": 0,
+                  "mean_confidence": null,
+                  "empirical_rate": null
+                },
+                {
+                  "bin_low": 0.7,
+                  "bin_high": 0.8,
+                  "count": 1,
+                  "mean_confidence": 0.7663,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.8,
+                  "bin_high": 0.9,
+                  "count": 4,
+                  "mean_confidence": 0.8724,
+                  "empirical_rate": 1.0
+                },
+                {
+                  "bin_low": 0.9,
+                  "bin_high": 1.0,
+                  "count": 4,
+                  "mean_confidence": 0.9387,
+                  "empirical_rate": 0.5
+                }
+              ]
+            }
+          },
+          "false_positives": {
+            "benign_records": 39,
+            "benign_flagged": 0,
+            "benign_false_positive_rate": 0.0,
+            "benign_false_positive_rate_ci95": [
+              0.0,
+              0.0897
+            ],
+            "benign_lookalikes": 15,
+            "benign_lookalikes_flagged": 0,
+            "benign_lookalike_false_positive_rate": 0.0
+          },
+          "scores": [
+            [
+              0.03707645778187535,
+              0.038002033019220796,
+              0.030872541477316873,
+              0.034885722651862204
+            ],
+            [
+              0.03532763190649299,
+              0.031635776963426954,
+              0.03154616374634419,
+              0.03284350012725045
+            ],
+            [
+              0.0842656335836182,
+              0.10322957902143844,
+              0.06478999661336014,
+              0.09381524564415553
+            ],
+            [
+              0.04466329522819796,
+              0.03760380611342534,
+              0.043067324701222855,
+              0.05065595426949722
+            ],
+            [
+              0.044062066187466664,
+              0.0431178951352356,
+              0.039975807240806176,
+              0.04530701449556081
+            ],
+            [
+              0.09113154230470429,
+              0.059991761839059604,
+              0.07394278978159594,
+              0.11880121134338835
+            ],
+            [
+              0.8922645608018566,
+              0.9015581629301958,
+              0.9299094607238961,
+              0.9586681871630884
+            ],
+            [
+              0.9214565246442182,
+              0.805162992243954,
+              0.9376255339899273,
+              0.883979081953476
+            ],
+            [
+              0.03229342589005744,
+              0.032306826655110636,
+              0.03407911037600901,
+              0.03435679864910968
+            ],
+            [
+              0.03108869090028623,
+              0.03731915949642307,
+              0.05065703693217104,
+              0.04434996637671829
+            ],
+            [
+              0.04116171257699975,
+              0.04136970312355939,
+              0.0415418869238871,
+              0.042436298670284686
+            ],
+            [
+              0.9443656895521612,
+              0.9315669224769677,
+              0.9577313366444304,
+              0.8617525891584434
+            ],
+            [
+              0.039106941054967995,
+              0.039818731186514716,
+              0.04337016937418778,
+              0.036162743869023996
+            ],
+            [
+              0.03586949458382255,
+              0.043157034756083484,
+              0.033803913005626345,
+              0.04536964039478067
+            ],
+            [
+              0.06701569355302407,
+              0.0642028240205658,
+              0.07065876818227065,
+              0.07962566026070411
+            ],
+            [
+              0.030593839088827592,
+              0.02778176185898132,
+              0.033641882628863924,
+              0.03576569372474495
+            ],
+            [
+              0.9441235940654428,
+              0.8983998049536418,
+              0.686225691940737,
+              0.9328056614489414
+            ],
+            [
+              0.03995768310288156,
+              0.024963190058965603,
+              0.033535164542815084,
+              0.03547608874662329
+            ],
+            [
+              0.04309174536035453,
+              0.026928622097001267,
+              0.04468595714457683,
+              0.043700416972296575
+            ],
+            [
+              0.040836271154183694,
+              0.049632786004968905,
+              0.05553182697829357,
+              0.05441043378471569
+            ],
+            [
+              0.039574180146605624,
+              0.03188982734038357,
+              0.04172954799019488,
+              0.041242713394915635
+            ],
+            [
+              0.0437554117793407,
+              0.04193895067809892,
+              0.0413363593952877,
+              0.04351004350253526
+            ],
+            [
+              0.03697233747957359,
+              0.02905034801301322,
+              0.03338974343148083,
+              0.03196316384025131
+            ],
+            [
+              0.0784574825862823,
+              0.07067188796166828,
+              0.06301948595650167,
+              0.06413565561913302
+            ],
+            [
+              0.05272231302872165,
+              0.05047119216536066,
+              0.041455492703402076,
+              0.04607560835880888
+            ],
+            [
+              0.768839442921487,
+              0.8058383593070153,
+              0.7072591369992682,
+              0.8487231170654482
+            ],
+            [
+              0.9464176479473976,
+              0.8142747067848664,
+              0.8942528250285371,
+              0.9196276956852989
+            ],
+            [
+              0.03048287403509904,
+              0.03371540416932531,
+              0.030567784803520143,
+              0.03257571717081878
+            ],
+            [
+              0.029013192207515904,
+              0.026097146990724168,
+              0.031930614495634564,
+              0.028660243678250284
+            ],
+            [
+              0.038983028186295156,
+              0.04180039401224887,
+              0.037668152496105285,
+              0.04163683558995958
+            ],
+            [
+              0.0857171052591094,
+              0.07991949140696894,
+              0.06664763783701193,
+              0.06479898246276036
+            ],
+            [
+              0.8867002645630782,
+              0.801386146435085,
+              0.9038124862737258,
+              0.766345648651777
+            ],
+            [
+              0.03666693129938858,
+              0.026513659037830553,
+              0.0352344282417519,
+              0.040195527872750665
+            ],
+            [
+              0.03807840124493239,
+              0.039070346190110655,
+              0.036999765071988475,
+              0.04017854085893582
+            ],
+            [
+              0.042380191154821535,
+              0.045302804335515354,
+              0.04438799209538422,
+              0.039554431563130696
+            ],
+            [
+              0.04116171257699975,
+              0.04136970312355939,
+              0.0415418869238871,
+              0.042436298670284686
+            ],
+            [
+              0.0334065793152833,
+              0.029327125176190207,
+              0.025736126269016082,
+              0.027831603589988232
+            ],
+            [
+              0.9321282724786867,
+              0.8024303603375721,
+              0.9074928239303158,
+              0.8952126950442026
+            ],
+            [
+              0.03256730481117317,
+              0.03110564552600664,
+              0.03693329346946546,
+              0.04366954076504142
+            ],
+            [
+              0.050743041276474075,
+              0.03643360737618524,
+              0.059441204940672655,
+              0.04049192850893814
+            ],
+            [
+              0.9682263541763926,
+              0.9730540084056205,
+              0.9219402266680972,
+              0.943848906899825
+            ],
+            [
+              0.05891405211033204,
+              0.056560060124666765,
+              0.04570183532146184,
+              0.05379954277646858
+            ],
+            [
+              0.04253751000479768,
+              0.04649786615418745,
+              0.044470012594250784,
+              0.04518997401875139
+            ],
+            [
+              0.04564336928548711,
+              0.04603582946870383,
+              0.03870362963876116,
+              0.040372660988865945
+            ],
+            [
+              0.045244647609543394,
+              0.04378011166670481,
+              0.03834610575888678,
+              0.04145755582604723
+            ],
+            [
+              0.055098627394775467,
+              0.045509970702860385,
+              0.054235447399556276,
+              0.04376978181579666
+            ],
+            [
+              0.038944781856598,
+              0.038869405154458206,
+              0.029018264605298667,
+              0.03351080340522224
+            ],
+            [
+              0.0941169654568758,
+              0.08253916159799848,
+              0.06976536011585899,
+              0.07524055116974501
+            ]
+          ]
+        },
+        "distilbert": {
+          "status": "not available",
+          "reason": "install requirements-ml.txt and run backend/scripts/train_risk.py --model distilbert"
+        }
+      }
+    }
+  },
+  "public_dataset": {
+    "status": "ok",
+    "n": 5000,
+    "spam_fraction": 0.132,
+    "rules": {
+      "labels": {
+        "urgency": {
+          "precision": 0.7879,
+          "recall": 1.0,
+          "f1": 0.8814,
+          "support": 78,
+          "tp": 78,
+          "fp": 21,
+          "fn": 0,
+          "tn": 4901
+        },
+        "threat_language": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "support": 1,
+          "tp": 1,
+          "fp": 6,
+          "fn": 0,
+          "tn": 4993
+        },
+        "emotional_pressure": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "tp": 0,
+          "fp": 13,
+          "fn": 0,
+          "tn": 4987
+        },
+        "payment_request": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5000
+        },
+        "any_indicator": {
+          "precision": 0.681,
+          "recall": 1.0,
+          "f1": 0.8103,
+          "support": 79,
+          "tp": 79,
+          "fp": 37,
+          "fn": 0,
+          "tn": 4884
+        }
+      },
+      "calibration": {
+        "urgency": {
+          "ece": 0.0068,
+          "mce": 0.7373,
+          "brier": 0.0047,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 4901,
+              "mean_confidence": 0.0,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 18,
+              "mean_confidence": 0.5167,
+              "empirical_rate": 0.8889
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 54,
+              "mean_confidence": 0.65,
+              "empirical_rate": 0.9259
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 11,
+              "mean_confidence": 0.8282,
+              "empirical_rate": 0.0909
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 16,
+              "mean_confidence": 0.9442,
+              "empirical_rate": 0.6875
+            }
+          ]
+        },
+        "threat_language": {
+          "ece": 0.001,
+          "mce": 0.0,
+          "brier": 0.001,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 4993,
+              "mean_confidence": 0.0,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 1,
+              "mean_confidence": 0.7,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 3,
+              "mean_confidence": 0.85,
+              "empirical_rate": 0.3333
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 3,
+              "mean_confidence": 0.9966,
+              "empirical_rate": 0.0
+            }
+          ]
+        },
+        "emotional_pressure": {
+          "ece": 0.002,
+          "mce": 0.85,
+          "brier": 0.0016,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 4987,
+              "mean_confidence": 0.0,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 7,
+              "mean_confidence": 0.7,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 6,
+              "mean_confidence": 0.85,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            }
+          ]
+        },
+        "payment_request": {
+          "ece": 0.0002,
+          "mce": 0.0,
+          "brier": 0.0001,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 4997,
+              "mean_confidence": 0.0,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 3,
+              "mean_confidence": 0.3,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            }
+          ]
+        }
+      }
+    },
+    "tfidf-lr": {
+      "labels": {
+        "urgency": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 78,
+          "tp": 0,
+          "fp": 0,
+          "fn": 78,
+          "tn": 4922
+        },
+        "threat_language": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 4999
+        },
+        "emotional_pressure": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5000
+        },
+        "payment_request": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5000
+        },
+        "any_indicator": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 79,
+          "tp": 0,
+          "fp": 0,
+          "fn": 79,
+          "tn": 4921
+        }
+      },
+      "calibration": {
+        "urgency": {
+          "ece": 0.1118,
+          "mce": 0.367,
+          "brier": 0.0296,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 920,
+              "mean_confidence": 0.0826,
+              "empirical_rate": 0.0022
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 3610,
+              "mean_confidence": 0.1185,
+              "empirical_rate": 0.0172
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 291,
+              "mean_confidence": 0.2269,
+              "empirical_rate": 0.0309
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 165,
+              "mean_confidence": 0.367,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 11,
+              "mean_confidence": 0.4278,
+              "empirical_rate": 0.4545
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 2,
+              "mean_confidence": 0.5326,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 1,
+              "mean_confidence": 0.6521,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            }
+          ]
+        },
+        "threat_language": {
+          "ece": 0.1177,
+          "mce": 0.4404,
+          "brier": 0.0171,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 976,
+              "mean_confidence": 0.0786,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 3637,
+              "mean_confidence": 0.1114,
+              "empirical_rate": 0.0003
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 211,
+              "mean_confidence": 0.2256,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 162,
+              "mean_confidence": 0.3308,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 10,
+              "mean_confidence": 0.4404,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 4,
+              "mean_confidence": 0.5568,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            }
+          ]
+        },
+        "emotional_pressure": {
+          "ece": 0.1159,
+          "mce": 0.3225,
+          "brier": 0.0163,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 3835,
+              "mean_confidence": 0.0927,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 832,
+              "mean_confidence": 0.1571,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 167,
+              "mean_confidence": 0.234,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 163,
+              "mean_confidence": 0.3225,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 2,
+              "mean_confidence": 0.4629,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 1,
+              "mean_confidence": 0.5782,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            }
+          ]
+        },
+        "payment_request": {
+          "ece": 0.1285,
+          "mce": 0.3594,
+          "brier": 0.02,
+          "reliability": [
+            {
+              "bin_low": 0.0,
+              "bin_high": 0.1,
+              "count": 900,
+              "mean_confidence": 0.0828,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.1,
+              "bin_high": 0.2,
+              "count": 3687,
+              "mean_confidence": 0.1212,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.2,
+              "bin_high": 0.3,
+              "count": 217,
+              "mean_confidence": 0.2288,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.3,
+              "bin_high": 0.4,
+              "count": 189,
+              "mean_confidence": 0.3594,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.4,
+              "bin_high": 0.5,
+              "count": 4,
+              "mean_confidence": 0.4275,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.5,
+              "bin_high": 0.6,
+              "count": 2,
+              "mean_confidence": 0.5261,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.6,
+              "bin_high": 0.7,
+              "count": 1,
+              "mean_confidence": 0.6446,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_low": 0.7,
+              "bin_high": 0.8,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.8,
+              "bin_high": 0.9,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            },
+            {
+              "bin_low": 0.9,
+              "bin_high": 1.0,
+              "count": 0,
+              "mean_confidence": null,
+              "empirical_rate": null
+            }
+          ]
+        }
+      }
+    }
+  }
+}

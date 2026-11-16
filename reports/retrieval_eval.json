@@ -1,0 +1,311 @@
+{
+  "n_records": 48,
+  "n_chunks": 99,
+  "n_queries": 72,
+  "query_kinds": [
+    "entity",
+    "paraphrase",
+    "topic"
+  ],
+  "embedding_backend": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "is_fallback": false,
+    "faiss_available": true,
+    "note": "Real sentence-transformer embeddings, computed locally on CPU."
+  },
+  "configurations": [
+    {
+      "name": "bm25",
+      "mode": "lexical",
+      "fusion": null,
+      "queries_scored": 72,
+      "overall": {
+        "recall_at_k": {
+          "1": 0.5069,
+          "3": 0.6806,
+          "5": 0.7917,
+          "10": 0.875
+        },
+        "mrr": 0.8581,
+        "ndcg_at_k": {
+          "1": 0.8194,
+          "3": 0.8509,
+          "5": 0.8742,
+          "10": 0.8791
+        },
+        "num_queries": 72
+      },
+      "by_query_kind": {
+        "entity": {
+          "recall_at_k": {
+            "1": 0.7692,
+            "3": 0.8718,
+            "5": 0.9744,
+            "10": 1.0
+          },
+          "mrr": 0.8406,
+          "ndcg_at_k": {
+            "1": 0.7692,
+            "3": 0.8272,
+            "5": 0.8703,
+            "10": 0.8794
+          },
+          "num_queries": 39
+        },
+        "paraphrase": {
+          "recall_at_k": {
+            "1": 0.1,
+            "3": 0.3,
+            "5": 0.5,
+            "10": 0.75
+          },
+          "mrr": 1.0,
+          "ndcg_at_k": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "num_queries": 20
+        },
+        "topic": {
+          "recall_at_k": {
+            "1": 0.3462,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.6923
+          },
+          "mrr": 0.6923,
+          "ndcg_at_k": {
+            "1": 0.6923,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.6923
+          },
+          "num_queries": 13
+        }
+      }
+    },
+    {
+      "name": "embeddings",
+      "mode": "semantic",
+      "fusion": null,
+      "queries_scored": 72,
+      "overall": {
+        "recall_at_k": {
+          "1": 0.3611,
+          "3": 0.4028,
+          "5": 0.5069,
+          "10": 0.6528
+        },
+        "mrr": 0.5076,
+        "ndcg_at_k": {
+          "1": 0.4167,
+          "3": 0.4161,
+          "5": 0.4809,
+          "10": 0.5558
+        },
+        "num_queries": 72
+      },
+      "by_query_kind": {
+        "entity": {
+          "recall_at_k": {
+            "1": 0.641,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.7436
+          },
+          "mrr": 0.6743,
+          "ndcg_at_k": {
+            "1": 0.641,
+            "3": 0.67,
+            "5": 0.67,
+            "10": 0.6877
+          },
+          "num_queries": 39
+        },
+        "paraphrase": {
+          "recall_at_k": {
+            "1": 0.05,
+            "3": 0.1,
+            "5": 0.25,
+            "10": 0.45
+          },
+          "mrr": 0.4,
+          "ndcg_at_k": {
+            "1": 0.25,
+            "3": 0.1913,
+            "5": 0.306,
+            "10": 0.4613
+          },
+          "num_queries": 20
+        },
+        "topic": {
+          "recall_at_k": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.3462,
+            "10": 0.6923
+          },
+          "mrr": 0.1731,
+          "ndcg_at_k": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.1828,
+            "10": 0.3055
+          },
+          "num_queries": 13
+        }
+      }
+    },
+    {
+      "name": "hybrid_rrf",
+      "mode": "hybrid",
+      "fusion": "rrf",
+      "queries_scored": 72,
+      "overall": {
+        "recall_at_k": {
+          "1": 0.4375,
+          "3": 0.6111,
+          "5": 0.7222,
+          "10": 0.8333
+        },
+        "mrr": 0.7998,
+        "ndcg_at_k": {
+          "1": 0.75,
+          "3": 0.7814,
+          "5": 0.7828,
+          "10": 0.7865
+        },
+        "num_queries": 72
+      },
+      "by_query_kind": {
+        "entity": {
+          "recall_at_k": {
+            "1": 0.641,
+            "3": 0.7436,
+            "5": 0.8718,
+            "10": 1.0
+          },
+          "mrr": 0.7329,
+          "ndcg_at_k": {
+            "1": 0.641,
+            "3": 0.699,
+            "5": 0.752,
+            "10": 0.796
+          },
+          "num_queries": 39
+        },
+        "paraphrase": {
+          "recall_at_k": {
+            "1": 0.1,
+            "3": 0.3,
+            "5": 0.45,
+            "10": 0.6
+          },
+          "mrr": 1.0,
+          "ndcg_at_k": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 0.9016,
+            "10": 0.829
+          },
+          "num_queries": 20
+        },
+        "topic": {
+          "recall_at_k": {
+            "1": 0.3462,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.6923
+          },
+          "mrr": 0.6923,
+          "ndcg_at_k": {
+            "1": 0.6923,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.6923
+          },
+          "num_queries": 13
+        }
+      }
+    },
+    {
+      "name": "hybrid_weighted",
+      "mode": "hybrid",
+      "fusion": "weighted",
+      "queries_scored": 72,
+      "overall": {
+        "recall_at_k": {
+          "1": 0.4514,
+          "3": 0.6111,
+          "5": 0.7222,
+          "10": 0.8056
+        },
+        "mrr": 0.8017,
+        "ndcg_at_k": {
+          "1": 0.7639,
+          "3": 0.7865,
+          "5": 0.7873,
+          "10": 0.7802
+        },
+        "num_queries": 72
+      },
+      "by_query_kind": {
+        "entity": {
+          "recall_at_k": {
+            "1": 0.6667,
+            "3": 0.7436,
+            "5": 0.8718,
+            "10": 0.9487
+          },
+          "mrr": 0.7366,
+          "ndcg_at_k": {
+            "1": 0.6667,
+            "3": 0.7085,
+            "5": 0.7603,
+            "10": 0.7851
+          },
+          "num_queries": 39
+        },
+        "paraphrase": {
+          "recall_at_k": {
+            "1": 0.1,
+            "3": 0.3,
+            "5": 0.45,
+            "10": 0.6
+          },
+          "mrr": 1.0,
+          "ndcg_at_k": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 0.9016,
+            "10": 0.8277
+          },
+          "num_queries": 20
+        },
+        "topic": {
+          "recall_at_k": {
+            "1": 0.3462,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.6923
+          },
+          "mrr": 0.6923,
+          "ndcg_at_k": {
+            "1": 0.6923,
+            "3": 0.6923,
+            "5": 0.6923,
+            "10": 0.6923
+          },
+          "num_queries": 13
+        }
+      }
+    }
+  ],
+  "caveats": [
+    "Relevance is binary: a record is relevant or it is not. This suits 'which records mention X' and understates topical queries.",
+    "Queries are derived from the same generator that wrote the records, so the corpus is easier than real user data would be.",
+    "nDCG uses the same binary gains as Recall, so it mostly re-orders the Recall numbers rather than adding an independent view."
+  ]
+}

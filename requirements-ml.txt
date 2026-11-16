@@ -1,0 +1,21 @@
+# DigitalMind - optional heavy ML extras.
+#
+# These are NOT required to run the app. DigitalMind runs fully without them and
+# falls back to deterministic, dependency-free baselines (see docs/DECISIONS.md).
+#
+# Install with:  pip install -r requirements-ml.txt
+#
+# All of the following run locally on CPU. No data is sent to any external service
+# unless the user explicitly configures a remote endpoint in Settings.
+
+torch==2.5.1           # CPU wheel: see scripts/setup_torch.py for the CPU index URL
+transformers==4.47.1
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+datasets==3.2.0
+accelerate==1.1.1
+
+# Probability calibration is implemented in-tree (app/risk/calibration.py) using
+# isotonic regression + Platt scaling. We deliberately avoid the `calibration` package:
+# it has no maintained wheel for Windows/Python 3.11 and a ~15-line implementation
+# keeps the calibration step auditable, which this project requires.

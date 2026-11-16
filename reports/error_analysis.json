@@ -1,0 +1,149 @@
+{
+  "generated_from": [
+    "extraction_eval.json",
+    "risk_eval.json",
+    "retrieval_eval.json",
+    "entity_resolution_eval.json"
+  ],
+  "extraction": {
+    "n_errors_analysed": 25,
+    "by_cause": {
+      "project/period code tagged as a name": 10,
+      "organization suffix heuristic over-firing": 7,
+      "entity missed (boundary or type disagreement)": 5,
+      "capitalisation heuristic over-firing": 3
+    },
+    "examples": {
+      "project/period code tagged as a name": [
+        "[PERSON] 'Project Atlas'",
+        "[PERSON] 'Project Meridian'",
+        "[ORG] 'Project Meridian'",
+        "[PERSON] 'Project Beacon'",
+        "[PERSON] 'Project Beacon'"
+      ],
+      "organization suffix heuristic over-firing": [
+        "[ORG] 'Ingrid Abadi'",
+        "[ORG] 'SLA'",
+        "[ORG] 'Harbourline'",
+        "[ORG] 'Harbourline'",
+        "[ORG] 'SLA'"
+      ],
+      "entity missed (boundary or type disagreement)": [
+        "[PERSON] 'Ingrid Abadi'",
+        "[ORG] 'Account Services'",
+        "[ORG] 'Account Services'",
+        "[PERSON] 'Leila Abadi'",
+        "[ORG] 'Account Services'"
+      ],
+      "capitalisation heuristic over-firing": [
+        "[PERSON] 'Account Services'",
+        "[PERSON] 'Account Services'",
+        "[PERSON] 'Account Services'"
+      ]
+    },
+    "note": "Several of these are not model errors. PROJECT/period codes and numeric tokens are extracted with a low confidence and are not annotated as entities in the gold set, so they appear as false positives here."
+  },
+  "risk": {
+    "dev/rules": {
+      "macro_f1": 0.8086,
+      "benign_false_positive_rate": 0.1842,
+      "benign_false_positive_rate_ci95": [
+        0.0922,
+        0.3342
+      ],
+      "benign_lookalike_false_positive_rate": 0.3571
+    },
+    "dev/tfidf-lr": {
+      "macro_f1": 0.9003,
+      "benign_false_positive_rate": 0.0,
+      "benign_false_positive_rate_ci95": [
+        0.0,
+        0.0918
+      ],
+      "benign_lookalike_false_positive_rate": 0.0
+    },
+    "test/rules": {
+      "macro_f1": 0.7729,
+      "benign_false_positive_rate": 0.2051,
+      "benign_false_positive_rate_ci95": [
+        0.1078,
+        0.3553
+      ],
+      "benign_lookalike_false_positive_rate": 0.5333
+    },
+    "test/tfidf-lr": {
+      "macro_f1": 0.7437,
+      "benign_false_positive_rate": 0.0,
+      "benign_false_positive_rate_ci95": [
+        0.0,
+        0.0897
+      ],
+      "benign_lookalike_false_positive_rate": 0.0
+    },
+    "interpretation": [
+      {
+        "observation": "TF-IDF + logistic regression scores higher than the rule baseline.",
+        "explanation": "The classifier memorised our own templates. The benign look-alikes reuse the same sentence frames as the attack records with a different middle clause, which is exactly the discrimination a bag-of-ngrams model is good at and a human is not fooled by. Treat the TF-IDF numbers as an upper bound that depends on the generator, not as evidence of generalisation.",
+        "mitigation": "The real public corpus is scored separately in risk_eval.json; that number is the one to trust about wording we did not write."
+      },
+      {
+        "observation": "The rule baseline produces false positives on genuine urgent reminders.",
+        "explanation": "'your account will be closed' and 'immediately' both appear in legitimate bank reminders. The mitigator list catches some of these and not all of them: a reminder that omits the 'no charge' sentence loses its mitigation.",
+        "mitigation": "The API reports each indicator separately with its evidence, so a user can see that the flag came from a policy sentence rather than a demand. Severity only reaches 'warning' when a payment demand is paired with a threat or a deadline."
+      }
+    ]
+  },
+  "retrieval": {
+    "embedding_backend": {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "is_fallback": false,
+      "faiss_available": true,
+      "note": "Real sentence-transformer embeddings, computed locally on CPU."
+    },
+    "interpretation": [
+      {
+        "observation": "Recall@5: BM25 0.792 vs hybrid RRF 0.722.",
+        "explanation": "Most queries in this benchmark are entity names lifted from the record, which is the strongest possible case for exact lexical matching and the weakest possible case for embeddings. Fusing a weaker channel with equal weight therefore costs recall on this corpus.",
+        "mitigation": "The per-kind breakdown shows where fusion does help. Keep the two channels separately selectable in Settings, and let the paraphrase queries - where BM25 has no lexical overlap at all - be the reason hybrid is the default."
+      },
+      {
+        "observation": "Paraphrase queries: Recall@1 0.100 but MRR 1.000.",
+        "explanation": "The right record is usually found, but several records are equally relevant so the first position is nearly a coin flip. Binary relevance makes nDCG look poor for the same reason.",
+        "mitigation": "Treat MRR as the meaningful number for topical queries and Recall@k for 'which records mention X'. Both are reported."
+      }
+    ],
+    "caveats": [
+      "Relevance is binary: a record is relevant or it is not. This suits 'which records mention X' and understates topical queries.",
+      "Queries are derived from the same generator that wrote the records, so the corpus is easier than real user data would be.",
+      "nDCG uses the same binary gains as Recall, so it mostly re-orders the Recall numbers rather than adding an independent view."
+    ]
+  },
+  "entity_resolution": {
+    "pairwise_f1": 0.85,
+    "distractor_false_merge_rate": 0.0,
+    "interpretation": [
+      {
+        "observation": "Recall is lower than precision: P=1.000 vs R=0.739.",
+        "explanation": "The resolver is deliberately conservative. A missed merge leaves two entities the user can inspect; a wrong merge silently asserts that two different people are the same, which is the more damaging error in a graph the user is meant to trust.",
+        "mitigation": "Clusters below the cohesion threshold are reported to the user as possibly-merged rather than being merged silently."
+      }
+    ]
+  },
+  "public_data": {
+    "status": "ok",
+    "n": 5000,
+    "spam": 660,
+    "ham": 4340,
+    "spam_fraction": 0.132,
+    "indicator_projection": {
+      "urgency": 78,
+      "threat_language": 1,
+      "emotional_pressure": 0,
+      "payment_request": 0
+    },
+    "interpretation": [
+      "The projection onto our indicators is deliberately conservative: only 'urgency' survives on real spam text. Real SMS spam rarely makes an explicit threat or an explicit emotional appeal - it relies on scarcity and a prize instead.",
+      "That is a genuine finding, not a bug. It means our four indicators cover the long-form business-email manipulation in Scenario A far better than they cover consumer SMS fraud, and the report should not claim otherwise."
+    ]
+  }
+}

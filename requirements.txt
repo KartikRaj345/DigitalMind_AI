@@ -1,0 +1,37 @@
+# DigitalMind - core application dependencies (CPU-only, local-first)
+# Python 3.11
+
+# --- API / server ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# --- persistence ---
+SQLAlchemy==2.0.36
+
+# --- NLP core ---
+spacy==3.8.4
+# NOTE: en_core_web_sm is installed separately, see scripts/setup_spacy.py
+# (spaCy wheels are platform specific; requirements-ml.txt pins ML extras)
+
+# --- classic ML / evaluation ---
+numpy==2.2.1
+scipy==1.15.0
+scikit-learn==1.6.1
+rank_bm25==0.2.2
+
+# --- fuzzy matching / graph ---
+rapidfuzz==3.12.2
+networkx==3.4.2
+
+# --- validation / settings ---
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+# --- dates ---
+python-dateutil==2.9.0.post0
+
+# --- tests ---
+pytest==8.3.4
+pytest-cov==6.0.0
+httpx==0.28.1

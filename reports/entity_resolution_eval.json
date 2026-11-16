@@ -1,0 +1,390 @@
+{
+  "benchmark": {
+    "n_clusters": 36,
+    "n_items": 288,
+    "variant_kinds": [
+      "canonical",
+      "upper case",
+      "lower case",
+      "title prefix",
+      "middle initial",
+      "email handle",
+      "surname typo",
+      "trailing punctuation",
+      "leading article",
+      "role suffix",
+      "lookalike domain",
+      "misspelled org token"
+    ],
+    "seed": 20260310
+  },
+  "primary": {
+    "pairwise": {
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.7391,
+      "pairwise_f1": 0.85,
+      "true_positive_pairs": 745,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 263
+    },
+    "b_cubed": {
+      "precision": 1.0,
+      "recall": 0.7717,
+      "f1": 0.8711
+    },
+    "n_gold_clusters": 36,
+    "n_pred_clusters": 36,
+    "mean_gold_cluster_size": 8.0
+  },
+  "distractors": {
+    "distractor_pairs_checked": 4,
+    "distractor_pairs_merged": 0,
+    "distractor_false_merge_rate": 0.0,
+    "examples": []
+  },
+  "threshold_sweep": [
+    {
+      "strong_threshold": 1.01,
+      "weak_threshold": 1.01,
+      "pairwise_f1": 0.4299,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.2738,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 732,
+      "b_cubed_f1": 0.5344,
+      "distractor_false_merge_rate": 0.0
+    },
+    {
+      "strong_threshold": 0.99,
+      "weak_threshold": 0.95,
+      "pairwise_f1": 0.6994,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.5377,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 466,
+      "b_cubed_f1": 0.7465,
+      "distractor_false_merge_rate": 0.0
+    },
+    {
+      "strong_threshold": 0.95,
+      "weak_threshold": 0.9,
+      "pairwise_f1": 0.842,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.7272,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 275,
+      "b_cubed_f1": 0.8645,
+      "distractor_false_merge_rate": 0.0
+    },
+    {
+      "strong_threshold": 0.92,
+      "weak_threshold": 0.86,
+      "pairwise_f1": 0.85,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.7391,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 263,
+      "b_cubed_f1": 0.8711,
+      "distractor_false_merge_rate": 0.0
+    },
+    {
+      "strong_threshold": 0.88,
+      "weak_threshold": 0.8,
+      "pairwise_f1": 0.8565,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.749,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 253,
+      "b_cubed_f1": 0.8766,
+      "distractor_false_merge_rate": 0.0
+    },
+    {
+      "strong_threshold": 0.85,
+      "weak_threshold": 0.75,
+      "pairwise_f1": 0.8565,
+      "pairwise_precision": 1.0,
+      "pairwise_recall": 0.749,
+      "false_positive_pairs": 0,
+      "false_negative_pairs": 253,
+      "b_cubed_f1": 0.8766,
+      "distractor_false_merge_rate": 0.0
+    }
+  ],
+  "ablation": {
+    "full": {
+      "pairwise": {
+        "pairwise_precision": 1.0,
+        "pairwise_recall": 0.7391,
+        "pairwise_f1": 0.85,
+        "true_positive_pairs": 745,
+        "false_positive_pairs": 0,
+        "false_negative_pairs": 263
+      },
+      "b_cubed": {
+        "precision": 1.0,
+        "recall": 0.7717,
+        "f1": 0.8711
+      },
+      "n_gold_clusters": 36,
+      "n_pred_clusters": 36,
+      "mean_gold_cluster_size": 8.0
+    },
+    "without_containment_and_handle": {
+      "pairwise": {
+        "pairwise_precision": 0.7777,
+        "pairwise_recall": 0.8085,
+        "pairwise_f1": 0.7928,
+        "true_positive_pairs": 815,
+        "false_positive_pairs": 233,
+        "false_negative_pairs": 193
+      },
+      "b_cubed": {
+        "precision": 0.8942,
+        "recall": 0.8325,
+        "f1": 0.8622
+      },
+      "n_gold_clusters": 36,
+      "n_pred_clusters": 32,
+      "mean_gold_cluster_size": 8.0
+    },
+    "without_email_handle": {
+      "pairwise": {
+        "pairwise_precision": 1.0,
+        "pairwise_recall": 0.7391,
+        "pairwise_f1": 0.85,
+        "true_positive_pairs": 745,
+        "false_positive_pairs": 0,
+        "false_negative_pairs": 263
+      },
+      "b_cubed": {
+        "precision": 1.0,
+        "recall": 0.7717,
+        "f1": 0.8711
+      },
+      "n_gold_clusters": 36,
+      "n_pred_clusters": 36,
+      "mean_gold_cluster_size": 8.0
+    },
+    "without_containment_and_handle_delta_f1": 0.0572,
+    "without_email_handle_delta_f1": 0.0
+  },
+  "qualitative": [
+    {
+      "case": "org_case_and_containment",
+      "input": [
+        "Northwind Bank",
+        "northwind bank",
+        "Northwind Bank Customer Verification"
+      ],
+      "n_clusters": 2,
+      "clusters": [
+        {
+          "canonical": "Northwind Bank",
+          "members": [
+            "Northwind Bank",
+            "Northwind Bank Customer Verification"
+          ],
+          "cohesion": 0.92,
+          "merges": [
+            {
+              "target": "northwind bank customer verification",
+              "alias": "Northwind Bank",
+              "kind": "containment",
+              "score": 0.92,
+              "detail": "containment match"
+            }
+          ]
+        },
+        {
+          "canonical": "northwind bank",
+          "members": [
+            "northwind bank"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        }
+      ]
+    },
+    {
+      "case": "org_lookalike_domain",
+      "input": [
+        "Northwind Bank",
+        "Northwind-secure"
+      ],
+      "n_clusters": 2,
+      "clusters": [
+        {
+          "canonical": "Northwind Bank",
+          "members": [
+            "Northwind Bank"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        },
+        {
+          "canonical": "Northwind-secure",
+          "members": [
+            "Northwind-secure"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        }
+      ]
+    },
+    {
+      "case": "person_email_handle",
+      "input": [
+        "Priya Raman",
+        "priya.raman@studio.example",
+        "Priya R. Raman"
+      ],
+      "n_clusters": 1,
+      "clusters": [
+        {
+          "canonical": "Priya R. Raman",
+          "members": [
+            "Priya R. Raman",
+            "Priya Raman",
+            "priya.raman@studio.example"
+          ],
+          "cohesion": 0.564,
+          "merges": [
+            {
+              "target": "priya raman studio example",
+              "alias": "Priya Raman",
+              "kind": "email_handle",
+              "score": 0.99,
+              "detail": "email_handle match"
+            },
+            {
+              "target": "priya r raman",
+              "alias": "Priya Raman",
+              "kind": "containment",
+              "score": 0.9,
+              "detail": "containment match"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "shared_surname_must_not_merge",
+      "input": [
+        "Ana Delgado",
+        "Ana M. Delgado",
+        "Marco Delgado"
+      ],
+      "n_clusters": 2,
+      "clusters": [
+        {
+          "canonical": "Ana Delgado",
+          "members": [
+            "Ana Delgado",
+            "Ana M. Delgado"
+          ],
+          "cohesion": 0.9,
+          "merges": [
+            {
+              "target": "ana m delgado",
+              "alias": "Ana Delgado",
+              "kind": "containment",
+              "score": 0.9,
+              "detail": "containment match"
+            }
+          ]
+        },
+        {
+          "canonical": "Marco Delgado",
+          "members": [
+            "Marco Delgado"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        }
+      ]
+    },
+    {
+      "case": "person_given_name_only",
+      "input": [
+        "Colin Whitfield",
+        "Colin"
+      ],
+      "n_clusters": 2,
+      "clusters": [
+        {
+          "canonical": "Colin",
+          "members": [
+            "Colin"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        },
+        {
+          "canonical": "Colin Whitfield",
+          "members": [
+            "Colin Whitfield"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        }
+      ]
+    },
+    {
+      "case": "leading_article",
+      "input": [
+        "Harbourline Credit Union",
+        "the Harbourline Credit Union"
+      ],
+      "n_clusters": 2,
+      "clusters": [
+        {
+          "canonical": "Harbourline Credit Union",
+          "members": [
+            "Harbourline Credit Union"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        },
+        {
+          "canonical": "the Harbourline Credit Union",
+          "members": [
+            "the Harbourline Credit Union"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        }
+      ]
+    },
+    {
+      "case": "single_character_typo",
+      "input": [
+        "Rafael Fontaine",
+        "Rafel Fontaine"
+      ],
+      "n_clusters": 2,
+      "clusters": [
+        {
+          "canonical": "Rafael Fontaine",
+          "members": [
+            "Rafael Fontaine"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        },
+        {
+          "canonical": "Rafel Fontaine",
+          "members": [
+            "Rafel Fontaine"
+          ],
+          "cohesion": 1.0,
+          "merges": []
+        }
+      ]
+    }
+  ],
+  "thresholds_in_use": {
+    "strong": 0.92,
+    "weak": 0.86,
+    "min_cohesion": 0.8
+  }
+}

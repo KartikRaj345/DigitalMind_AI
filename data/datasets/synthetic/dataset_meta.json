@@ -1,0 +1,34 @@
+{
+  "seed": 20260310,
+  "counts": {
+    "train": 224,
+    "dev": 48,
+    "test": 48
+  },
+  "total": 320,
+  "positive_rate": {
+    "train": 0.20089285714285715,
+    "dev": 0.20833333333333334,
+    "test": 0.1875
+  },
+  "scenarios": {
+    "train": [
+      "generated_backref",
+      "generated_benign_lookalike",
+      "generated_plain",
+      "generated_risk"
+    ],
+    "dev": [
+      "generated_backref",
+      "generated_benign_lookalike",
+      "generated_plain",
+      "generated_risk"
+    ],
+    "test": [
+      "generated_backref",
+      "generated_benign_lookalike",
+      "generated_plain",
+      "generated_risk"
+    ]
+  }
+}
