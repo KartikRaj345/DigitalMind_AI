@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\backend\run.py", line 200, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\backend\run.py", line 185, in main
+    from backend.app.privacy import LlmPolicy
+ModuleNotFoundError: No module named 'backend.app.privacy'
+
+DigitalMind
+============================================================
+  python        3.11.0
+  dependencies  all present
+  database      C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\data\digitalmind.db
+  spaCy model en_core_web_sm is missing. Entity extraction will use the rules baseline only. Install it with:  python -m spacy download en_core_web_sm
+  records       11 already imported (use --reset for a clean start)
+  ml extras     available (torch + transformers)
+  frontend      serving frontend\dist at /

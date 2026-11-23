@@ -1,0 +1,8 @@
+
+DigitalMind
+============================================================
+  python        3.14.3
+
+  Missing packages: fastapi, spacy, scikit-learn, numpy, rank_bm25, pydantic-settings
+  Install them with:  pip install -r requirements.txt
+

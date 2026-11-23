@@ -1,0 +1,153 @@
+INFO:     Started server process [10348]
+INFO:     Waiting for application startup.
+2026-11-23 15:26:23,370 INFO    backend.app.main: digitalmind 0.1.0 starting
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-11-23 15:26:26,205 WARNING backend.app.nlp.ner: spaCy unavailable (ModuleNotFoundError); using rules extractor only
+
+DigitalMind
+============================================================
+  python        3.11.0
+  dependencies  all present
+  database      C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\data\digitalmind.db
+  spaCy model en_core_web_sm is missing. Entity extraction will use the rules baseline only. Install it with:  python -m spacy download en_core_web_sm
+  records       11 already imported (use --reset for a clean start)
+  ml extras     available (torch + transformers)
+  frontend      serving frontend\dist at /
+
+  privacy       all analysis runs locally; no record content leaves this machine.
+
+  open          http://127.0.0.1:8000
+
+INFO:     127.0.0.1:63079 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62991 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51113 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51114 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54783 - "GET /api/records?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54784 - "GET /api/risk HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\backend\app\main.py", line 64, in spa
+    return JSONResponse({"detail": "Not found"}, status_code=404)
+           ^^^^^^^^^^^^
+NameError: name 'JSONResponse' is not defined
+INFO:     127.0.0.1:54785 - "GET /api/risk HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karti\OneDrive\Documents\DigitalMind\DigitalMind_AI\backend\app\main.py", line 64, in spa
+    return JSONResponse({"detail": "Not found"}, status_code=404)
+           ^^^^^^^^^^^^
+NameError: name 'JSONResponse' is not defined
+INFO:     127.0.0.1:64903 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64904 - "GET /v1/models HTTP/1.1" 200 OK
